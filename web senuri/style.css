@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('C:/Users/ASUS/Downloads/Senuri_Nangi/nnnn.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.container {
+    padding: 20px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff5722;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ff5722;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 28px;
+    text-align: center;
+}
+
+.header-text h1 {
+    font-size: 55px;
+    margin-top: 20px;
+}
+
+.header-text h1 span {
+    color: #ff5722;
+}
+
+#about {
+    padding: 80px 0;
+    color: #b0b0b0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #e0e0e0;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    color: #ff5722;
+    transition: color 0.3s;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff5722;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: width 0.3s;
+}
+
+.tab-links:hover {
+    color: #ffab91;
+}
+
+.tab-links:hover::after {
+    width: 50%;
+}
+
+.tab-contents {
+    display: none;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    color: #e0e0e0;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+#services {
+    padding: 30px 0;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div {
+    background: #2a2a2a;
+    padding: 40px;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div:hover {
+    background: #ff5722;
+    transform: translateY(-5px);
+}
+
+.services-list div h2 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+#portfolio {
+    padding: 50px 0;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), #ff5722);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 40px;
+    transition: height 0.5s;
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    padding: 14px 50px;
+    border: 1px solid #ff5722;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #e0e0e0;
+    background: #ff5722;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #e64a19;
+}
+
+.contact-left p i, .social-icons a:hover {
+    color: #ff5722;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #ababab;
+    transition: transform 0.5s;
+}
+
+.social-icons .fb-icon:hover {
+    color: #4267B2; /* Facebook's brand color */
+    transform: translate(-5px);
+}
+
+
+form input:focus, form textarea:focus {
+    border-color: #ff5722;
+}
+
+.copyright {
+    text-align: center;
+    padding: 25px 0;
+    background: #1e1e1e;
+    color: #ababab;
+}
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        background: #1e1e1e;
+        transition: 0.3s;
+    }
+
+    nav ul li {
+        margin: 25px;
+        text-align: center;
+    }
+
+    .header-text {
+        margin-top: 80%;
+        font-size: 18px;
+    }
+
+    .header-text h1 {
+        font-size: 36px;
+    }
+}
